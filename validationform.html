@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style_validationform.css">
+
+
+</head>
+<body class="bg-dark">
+
+    <div class="container first p-4 border rounded bg-white" style="width: 30vw; min-width: 310px;">
+        <form>
+            <div class="mb-3">
+                <h3 class="text-center fw-light">Inscrivez-vous</h3>
+            </div>
+
+            <!-- Utilisateur  -->
+            <div class='mb-3'>
+                <label for="utilisateur" class="form-label">Nom d'utilisateur</label>
+
+                <div class="input-group">
+                    <input type="text" name="utilisateur" id="utilisateur" class="form-control bg-light me-2" placeholder="Nom d'utilisateur" autocomplete="off" aria-describedby="help1" maxlength="24">
+                    <img src="ressources/check.png" alt="icone de validation">
+                </div>
+
+                <div class="message form-text text-danger" id="help1">Choisissez un pseudo entre 3 et 24 caratères</div>
+            </div>
+
+
+            <!-- Email  -->
+            <div class='mb-3'>
+                <label for="email" class="form-label">Entrez votre email</label>
+
+                <div class="input-group">
+                    <input type="email" name="email" id="email" class="form-control bg-light me-2" placeholder="Email"  autocomplete="off" aria-describedby="help2">
+                    <img src="ressources/check.png" alt="icone de validation">
+                </div>
+
+                <div class="message form-text text-danger" id="help2">Entrez un email valide</div>
+            </div>
+
+            <!-- Mot de passe  -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Mot de passe</label>
+
+                <div class="input-group">
+                    <input type="password" name="password" id="password" class="form-control bg-light me-2" placeholder="Mot de passe"  autocomplete="off" aria-describedby="help3">
+                    <img src="ressources/check.png" alt="icone de validation">
+                </div>
+
+                <div class="message form-text text-danger" id="help3">Le mot de passe doit contenir un symbôle, un chiffre, une lettre et au moins 3 caractères</div>
+
+                <!-- Sécurité du mot de passe  -->
+                <div class="message container p-1 mt-3">
+                    <div class="row text-center gx-1">
+                        <div class="security col border-top border-2 border-danger ">
+                            <span id="faible">faible</span>
+                        </div>
+                        <div class="security col border-top border-2 border-warning">
+                            <span id="moyen">moyen</span>
+                        </div>
+                        <div class="security col border-top border-2 border-success">
+                            <span id="fort">fort</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Confirmation  -->
+            <div class='mb-4'>
+                <label for="confirmation" class="form-label">Confirmez votre mot de passe</label>
+
+                <div class="input-group">
+                    <input type="password" name="confirmation" id="confirmation" class="form-control bg-light me-2" placeholder="Confirmez" autocomplete="off" aria-describedby="help4">
+                    <img src="ressources/check.png" alt="icone de validation">
+                </div>
+
+                <div class="message form-text text-danger" id="help4">Vos mots de passe ne correspondent pas.</div>
+
+            </div>
+            <div>
+                <button type="submit" class='btn btn-warning'>Création du compte</button>
+            </div>
+
+        </form>
+    </div>
+
+        <script src="validationform_js.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
