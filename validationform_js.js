@@ -10,7 +10,7 @@ let button           = document.querySelector('button');
 
 let securityLines    = document.querySelectorAll('.security');
 
-console.log(icones);
+// console.log(icones);
 
 //Vérification du nom d'utilisateur
 
